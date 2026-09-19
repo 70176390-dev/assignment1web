@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IronFit Gym | Sign Up</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-950 text-white">
+
+
+    <!-- NAVBAR -->
+
+    <nav class="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between">
+
+            <a href="../../index.html"
+                class="text-2xl font-bold text-red-500">
+
+                IronFit<span class="text-white">Gym</span>
+
+            </a>
+
+
+            <div class="flex flex-wrap gap-5 items-center">
+
+                <a href="../../index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="signup.html"
+                    class="border border-red-500 px-4 py-2 rounded-lg">
+                    Sign Up
+                </a>
+
+                <a href="signin.html"
+                    class="bg-red-600 px-4 py-2 rounded-lg">
+                    Sign In
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <main class="max-w-5xl mx-auto px-6 py-16">
+
+
+        <div class="text-center mb-10">
+
+            <span class="text-red-500 font-bold">
+                JOIN IRONFIT
+            </span>
+
+            <h1 class="text-5xl font-black mt-3">
+                Create Your Account
+            </h1>
+
+            <p class="text-gray-400 mt-3">
+                Start your fitness journey today.
+            </p>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+
+            <!-- BENEFITS -->
+
+            <div class="bg-gradient-to-br from-red-700 to-orange-600 rounded-3xl p-8">
+
+                <h2 class="text-3xl font-black">
+                    Membership Benefits
+                </h2>
+
+                <ul class="mt-7 space-y-4">
+
+                    <li>✓ Modern gym equipment</li>
+                    <li>✓ Expert trainer guidance</li>
+                    <li>✓ Group fitness classes</li>
+                    <li>✓ Progress tracking</li>
+                    <li>✓ Friendly community</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <div class="bg-gray-900 p-8 rounded-3xl border border-gray-800">
+
+                <form onsubmit="return validateSignup()">
+
+
+                    <div class="mb-4">
+
+                        <label class="block mb-2">
+                            Full Name
+                        </label>
+
+                        <input id="fullName"
+                            type="text"
+                            required
+                            minlength="2"
+                            class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700"
+                            placeholder="Muhammad Ali">
+
+                    </div>
+
+
+                    <div class="mb-4">
+
+                        <label class="block mb-2">
+                            Email
+                        </label>
+
+                        <input id="email"
+                            type="email"
+                            required
+                            class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700"
+                            placeholder="you@example.com">
+
+                    </div>
+
+
+                    <div class="mb-4">
+
+                        <label class="block mb-2">
+                            Phone
+                        </label>
+
+                        <input id="phone"
+                            type="tel"
+                            required
+                            class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700"
+                            placeholder="+92 300 1234567">
+
+                    </div>
+
+
+                    <div class="mb-4">
+
+                        <label class="block mb-2">
+                            Membership
+                        </label>
+
+                        <select id="plan"
+                            required
+                            class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700">
+
+                            <option value="">
+                                Choose a plan
+                            </option>
+
+                            <option>
+                                Basic
+                            </option>
+
+                            <option>
+                                Pro
+                            </option>
+
+                            <option>
+                                Elite
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="mb-4">
+
+                        <label class="block mb-2">
+                            Password
+                        </label>
+
+                        <input id="password"
+                            type="password"
+                            minlength="8"
+                            required
+                            class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700"
+                            placeholder="Minimum 8 characters">
+
+                    </div>
+
+
+                    <div class="mb-4">
+
+                        <label class="block mb-2">
+                            Confirm Password
+                        </label>
+
+                        <input id="confirmPassword"
+                            type="password"
+                            minlength="8"
+                            required
+                            class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700"
+                            placeholder="Repeat password">
+
+                    </div>
+
+
+                    <label class="flex gap-2 text-sm text-gray-400 mb-5">
+
+                        <input type="checkbox"
+                            required>
+
+                        I agree to the gym membership terms.
+
+                    </label>
+
+
+                    <button type="submit"
+                        class="w-full bg-red-600 hover:bg-red-700 py-3 rounded-lg font-bold">
+
+                        Create Account
+
+                    </button>
+
+
+                    <p id="signupMessage"
+                        class="text-sm mt-4 text-center">
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEPS -->
+
+        <section class="mt-12 grid md:grid-cols-3 gap-4">
+
+            <div class="bg-gray-900 p-5 rounded-xl">
+
+                <b class="text-red-500">
+                    01
+                </b>
+
+                <h3 class="font-bold mt-2">
+                    Register
+                </h3>
+
+                <p class="text-gray-400 text-sm mt-1">
+                    Enter your basic information.
+                </p>
+
+            </div>
+
+
+            <div class="bg-gray-900 p-5 rounded-xl">
+
+                <b class="text-red-500">
+                    02
+                </b>
+
+                <h3 class="font-bold mt-2">
+                    Choose Plan
+                </h3>
+
+                <p class="text-gray-400 text-sm mt-1">
+                    Select a membership.
+                </p>
+
+            </div>
+
+
+            <div class="bg-gray-900 p-5 rounded-xl">
+
+                <b class="text-red-500">
+                    03
+                </b>
+
+                <h3 class="font-bold mt-2">
+                    Start Training
+                </h3>
+
+                <p class="text-gray-400 text-sm mt-1">
+                    Visit IronFit and begin.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALERT -->
+
+        <div class="mt-8 p-4 rounded-lg bg-blue-900/30 border border-blue-800 text-blue-200">
+
+            <b>Tip:</b>
+            Use an active email address so the gym can contact you.
+
+        </div>
+
+
+        <!-- SIGN IN LINK -->
+
+        <div class="text-center mt-8 p-5 bg-gray-900 rounded-xl border border-gray-800">
+
+            Already have an account?
+
+            <a href="signin.html"
+                class="text-red-400 font-bold hover:underline">
+
+                Sign in.
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="bg-black border-t border-gray-800 mt-16">
+
+        <div class="text-center py-6 text-gray-500">
+
+            © 2026 IronFit Gym
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        function validateSignup() {
+
+            let password =
+                document.getElementById("password").value;
+
+            let confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+            let message =
+                document.getElementById("signupMessage");
+
+
+            if (password !== confirmPassword) {
+
+                message.innerText =
+                    "Passwords do not match.";
+
+                message.className =
+                    "text-red-400 text-sm mt-4 text-center";
+
+                return false;
+            }
+
+
+            message.innerText =
+                "Account form submitted successfully.";
+
+            message.className =
+                "text-green-400 text-sm mt-4 text-center";
+
+            return false;
+        }
+
+    </script>
+
+</body>
+
+</html>
